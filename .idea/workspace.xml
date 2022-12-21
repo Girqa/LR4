@@ -1,11 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="" />
+    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="Works for ideal case">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/JadePatternProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/ParsingProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/PriceEntryComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Agents/ConsumerAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Agents/DistributerAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Agents/ProducerAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Consumer/BuyEnergyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CleanPricesBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesParallelBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/ConfirmDealWithProducerBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergyBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/GetBestPriceBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/InitiateMarketBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/NotifyProducers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/RespondToConsumerBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/GetConsumerRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/MarketFMSBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/ConfirmDealWithDistributor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/DecriesPriceBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/RefuseTradingBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/RichesFinalPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/SendFirstPriceBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/JoinMarket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/TradeOnMarketFSMBehaviour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Valuable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/BestPriceContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/ConsumerRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/DistributerMarketData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/DistributerRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/MarketDealData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/ProducerData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/ProducerPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/TopicContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2J6J51yWbDN02q3n1PJZgs32mb8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -13,13 +74,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;B:/Java/MAS/Labs/LR4/src/main/resources&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Behaviours.Distributer.FSMSubBehaviours" />
+      <recent name="Behaviours.Distributer" />
+      <recent name="AdditionalClasses" />
+      <recent name="Behaviours.Producer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="B:\Java\MAS\Labs\LR4\src\main\resources" />
+      <recent name="B:\Java\MAS\Labs\LR4\src\main\java\AdditionalClasses" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="B:\Java\MAS\Labs\LR4\src\main\java\AdditionalClasses" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Jade">
+    <configuration name="Jade" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="jade.Boot" />
+      <module name="LR4" />
+      <option name="PROGRAM_PARAMETERS" value="-agents Consumer:Agents.ConsumerAgent;Distributer:Agents.DistributerAgent;Producer1:Agents.ProducerAgent;Producer2:Agents.ProducerAgent;Producer3:Agents.ProducerAgent; -services jade.core.messaging.TopicManagementService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LR4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Jade" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -28,7 +132,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671392417012</updated>
+      <workItem from="1671392418340" duration="16335000" />
+      <workItem from="1671453762116" duration="30157000" />
+      <workItem from="1671572494010" duration="14161000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1671392435684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671392435684</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Works for ideal case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Works for ideal case" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="13" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
