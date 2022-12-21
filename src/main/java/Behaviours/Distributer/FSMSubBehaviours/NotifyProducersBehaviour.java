@@ -7,12 +7,14 @@ import Models.DistributerRequest;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
-public class NotifyProducers extends OneShotBehaviour {
+@Slf4j
+public class NotifyProducersBehaviour extends OneShotBehaviour {
     DistributerMarketData marketData;
-    public NotifyProducers(DistributerMarketData marketData) {
+    public NotifyProducersBehaviour(DistributerMarketData marketData) {
         this.marketData = marketData;
     }
 
@@ -24,6 +26,7 @@ public class NotifyProducers extends OneShotBehaviour {
         topicMsg.setContent(ParsingProvider.toJson(distributerRequest));
         topicMsg.setProtocol("topic");
         producers.forEach(topicMsg::addReceiver);
+        log.info("{} connects producers to topic {}", getAgent().getLocalName(),  distributerRequest.getTopicName());
         getAgent().send(topicMsg);
     }
 }

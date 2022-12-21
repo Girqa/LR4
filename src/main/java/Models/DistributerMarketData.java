@@ -10,4 +10,5 @@ public class DistributerMarketData {
     private String marketName;
     private AID consumer;
     private ConsumerRequest consumerRequest;
+    private int wasDivided;
 }

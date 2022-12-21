@@ -11,10 +11,10 @@ import lombok.extern.slf4j.Slf4j;
 import static jade.lang.acl.MessageTemplate.*;
 
 @Slf4j
-public class ConfirmDealWithDistributor extends AchieveREResponder {
+public class ConfirmDealWithDistributorBehaviour extends AchieveREResponder {
     private ProducerData producerData;
 
-    public ConfirmDealWithDistributor(Agent a, ProducerData producerData) {
+    public ConfirmDealWithDistributorBehaviour(Agent a, ProducerData producerData) {
         super(a, and(
                 MatchPerformative(ACLMessage.REQUEST),
                 MatchProtocol("Confirm Deal")

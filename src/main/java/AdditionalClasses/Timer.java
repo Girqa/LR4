@@ -18,12 +18,12 @@ public class Timer {
 
     private Timer() {
         startTime = System.currentTimeMillis();
-        speed = 900;
+        speed = 450;
         listeners = new CopyOnWriteArrayList<>();
         ses = Executors.newSingleThreadScheduledExecutor();
         ses.scheduleAtFixedRate(
                 () -> listeners.forEach(l -> l.accept(getCurHour())),
-        0L, secondPerHour * millisPerSecond / 2 /speed, TimeUnit.MILLISECONDS);
+        0L, 5L, TimeUnit.MILLISECONDS);
     }
 
     public static Timer getInstance() {
@@ -51,6 +51,9 @@ public class Timer {
         return (hourFinishTime - pastTime) / speed;
     }
 
+    public long getMillisPerHour() {
+        return  millisPerSecond * secondPerHour / speed;
+    }
     public void addListener(Consumer<Integer> listener) {
         listeners.add(listener);
     }

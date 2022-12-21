@@ -12,5 +12,5 @@ public class ConsumerRequest {
     @NonNull
     private double energy;
     @NonNull
-    private int hourWhenRequired;
+    private double maxPrice;
 }

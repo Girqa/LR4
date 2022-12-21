@@ -9,7 +9,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class MarketDealData {
+public class ProducerMarketData {
     private double consumerNeeds;
     private ProducerData producerData;
     private AID marketTopic;

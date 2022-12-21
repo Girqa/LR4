@@ -1,10 +1,11 @@
 package Agents;
 
 import AdditionalClasses.JadePatternProvider;
-import Behaviours.Producer.ConfirmDealWithDistributor;
+import Behaviours.Producer.ConfirmDealWithDistributorBehaviour;
+import Behaviours.Producer.ShowCurrentPowerBehaviour;
 import Models.ProducerData;
 import AdditionalClasses.Timer;
-import Behaviours.Producer.JoinMarket;
+import Behaviours.Producer.JoinMarketBehaviour;
 import jade.core.Agent;
 
 import java.util.function.Function;
@@ -18,7 +19,8 @@ public class ProducerAgent extends Agent {
         Timer.getInstance().addListener(data);
         // главным образом - функция какая
         JadePatternProvider.registerYellowPage(this, "Producer");
-        addBehaviour(new JoinMarket(data));
-        addBehaviour(new ConfirmDealWithDistributor(this, data));
+        addBehaviour(new JoinMarketBehaviour(data));
+        addBehaviour(new ConfirmDealWithDistributorBehaviour(this, data));
+        addBehaviour(new ShowCurrentPowerBehaviour(this, data));
     }
 }

@@ -15,11 +15,14 @@ public class SendOfferBehaviour extends Behaviour {
     private int curHour;
     private Function<Integer, Double> energyConsumption;
     private AID distributer;
+    private double maxPrice;
     private Timer timer;
 
     public SendOfferBehaviour(Function<Integer, Double> energyConsumption,
+                              double maxPrice,
                               AID distributer) {
         this.timer = Timer.getInstance();
+        this.maxPrice = maxPrice;
         this.curHour = timer.getCurHour() - 1;
         this.energyConsumption = energyConsumption;
         this.distributer = distributer;
@@ -34,9 +37,10 @@ public class SendOfferBehaviour extends Behaviour {
             ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
             request.setProtocol("ConsumerRequest");
             String content = ParsingProvider.toJson(
-                    new ConsumerRequest(energyConsumption.apply(curHour), curHour)
+                    new ConsumerRequest(energyConsumption.apply(curHour), maxPrice)
             );
             request.setContent(content);
+            System.out.println();
             log.debug("{} sends {} to {}", getAgent().getLocalName(), content, distributer.getLocalName());
             request.addReceiver(distributer);
 

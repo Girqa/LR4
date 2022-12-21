@@ -1,6 +1,6 @@
 package Agents;
 
-import Behaviours.Distributer.GetConsumerRequest;
+import Behaviours.Distributer.GetConsumerRequestBehaviour;
 import jade.core.Agent;
 
 public class DistributerAgent extends Agent {
@@ -11,6 +11,6 @@ public class DistributerAgent extends Agent {
         // Регистрация в df services
         ////
         // Добавление поведения получения запроса от потребителя
-        addBehaviour(new GetConsumerRequest());
+        addBehaviour(new GetConsumerRequestBehaviour());
     }
 }

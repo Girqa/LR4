@@ -2,7 +2,7 @@ package Behaviours.Producer.FSMSubBehaviours;
 
 import AdditionalClasses.JadePatternProvider;
 import AdditionalClasses.ParsingProvider;
-import Models.MarketDealData;
+import Models.ProducerMarketData;
 import Models.ProducerPrice;
 import jade.core.AID;
 import jade.core.behaviours.Behaviour;
@@ -14,7 +14,7 @@ import static jade.lang.acl.MessageTemplate.*;
 
 @Slf4j
 public class DecriesPriceBehaviour extends Behaviour {
-    private MarketDealData marketData;
+    private ProducerMarketData marketData;
     private double finalPrice;
     private double step;
     private double lastPrice;
@@ -23,7 +23,7 @@ public class DecriesPriceBehaviour extends Behaviour {
     private boolean done;
     private int onEndResult;
 
-    public DecriesPriceBehaviour(MarketDealData marketData) {
+    public DecriesPriceBehaviour(ProducerMarketData marketData) {
         this.marketData = marketData;
         this.lastPrice = marketData.getCurrentStartPrice();
         this.topic = marketData.getMarketTopic();
@@ -49,9 +49,10 @@ public class DecriesPriceBehaviour extends Behaviour {
         ACLMessage agentsPrice = getAgent().receive(mt);
         if (agentsPrice != null && marketData.haveEnoughPower()) {
             ProducerPrice receivedPrice = ParsingProvider.fromJson(agentsPrice.getContent(), ProducerPrice.class);
-            initializeVariables();
+            finalPrice = marketData.getCurrentFinalPrice();
+            step = finalPrice / 5;
             double otherPrice = receivedPrice.getPrice();
-            if (finalPrice < otherPrice) {
+            if (finalPrice <= otherPrice) {
                 if (otherPrice - finalPrice > step && lastPrice >= otherPrice) {
                     ProducerPrice newPrice = new ProducerPrice(otherPrice - step, receivedPrice.getVolume());
                     lastPrice = newPrice.getPrice();
@@ -65,6 +66,7 @@ public class DecriesPriceBehaviour extends Behaviour {
                     JadePatternProvider.disconnectFromTopic(getAgent(), topic);
                 }
             } else {
+                //log.info("{} got final price {} from topic: {}", getAgent().getLocalName(), finalPrice, );
                 onEndResult = 1;
                 done = true;
                 JadePatternProvider.disconnectFromTopic(getAgent(), topic);
@@ -88,11 +90,6 @@ public class DecriesPriceBehaviour extends Behaviour {
         return done;
     }
 
-    private void initializeVariables() {
-        finalPrice = marketData.getCurrentFinalPrice();
-        step = finalPrice / 5;
-
-    }
     private void sendPrice(ProducerPrice price) {
         String content = ParsingProvider.toJson(price);
         log.debug("{} sends to {} data {}", getAgent().getLocalName(), topic.getLocalName(), content);

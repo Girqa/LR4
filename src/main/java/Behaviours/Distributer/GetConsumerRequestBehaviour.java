@@ -5,12 +5,13 @@ import AdditionalClasses.Timer;
 import Models.ConsumerRequest;
 import Models.DistributerMarketData;
 import jade.core.behaviours.Behaviour;
+import jade.core.behaviours.WakerBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class GetConsumerRequest extends Behaviour {
+public class GetConsumerRequestBehaviour extends Behaviour {
     private MessageTemplate mt;
     private int marketsCounter = 0;
     private final Timer timer = Timer.getInstance();
@@ -34,9 +35,15 @@ public class GetConsumerRequest extends Behaviour {
             DistributerMarketData data = new DistributerMarketData(
                     "Market" + marketsCounter++ + timer.getMillisToNextHour(),
                     request.getSender(),
-                    consumerRequest
+                    consumerRequest,
+                    0
             );
-            getAgent().addBehaviour(new MarketFMSBehaviour(getAgent(), data));
+            getAgent().addBehaviour(new WakerBehaviour(getAgent(), 10L) {
+                @Override
+                protected void onWake() {
+                    getAgent().addBehaviour(new DurationLimitedMarkedBehaviour(getAgent(), data, timer.getMillisToNextHour()));
+                }
+            });
         } else {
             block();
         }

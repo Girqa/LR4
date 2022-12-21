@@ -18,7 +18,7 @@ public class InitiateMarketBehaviour extends OneShotBehaviour {
 
     @Override
     public void action() {
-        log.debug("Sends {} to topic", requestMsg);
+        log.info("Sends {} to {}", requestMsg, topic.getLocalName());
         ACLMessage initRequest = new ACLMessage(ACLMessage.REQUEST);
         initRequest.setProtocol("InitMarket");
         initRequest.setContent(ParsingProvider.toJson(requestMsg));

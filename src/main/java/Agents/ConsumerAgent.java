@@ -14,9 +14,10 @@ public class ConsumerAgent extends Agent {
         String distibuter = "Distributer";
         AID dis = new AID(distibuter, false);
         // Получить свой график нагрузки
-        Function<Integer, Double> energyConsumption = h -> 30.0/(h+1);
+        Function<Integer, Double> energyConsumption = h -> 66.0/(h+1);
+        double maxPrice = 0.9;
         // Поведение отправки запроса поставщику
-        addBehaviour(new SendOfferBehaviour(energyConsumption, dis));
+        addBehaviour(new SendOfferBehaviour(energyConsumption, maxPrice, dis));
         addBehaviour(new GetOrderResultBehaviour());
     }
 }

@@ -22,8 +22,19 @@ public class GetOrderResultBehaviour extends Behaviour {
     public void action() {
         ACLMessage result = getAgent().receive(mt);
         if (result != null) {
-            BestPriceContainer container = ParsingProvider.fromJson(result.getContent(), BestPriceContainer.class);
-            log.info("{} received order result {}", getAgent().getLocalName(), container);
+            if (result.getContent().equals("Trading wasn't successful")){
+                log.warn(result.getContent());
+            } else if (result.getContent().equals("There are no appropriate price")){
+                log.warn(result.getContent());
+            } else {
+                BestPriceContainer container = ParsingProvider.fromJson(result.getContent(), BestPriceContainer.class);
+                log.warn("{} received order result: {} from producer: {}",
+                        getAgent().getLocalName(),
+                        container.getPrice(),
+                        container.getProducer().getLocalName()
+                );
+            }
+
         } else {
             block();
         }

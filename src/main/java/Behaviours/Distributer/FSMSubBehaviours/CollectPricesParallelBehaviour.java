@@ -15,7 +15,6 @@ public class CollectPricesParallelBehaviour extends ParallelBehaviour {
                                           Map<AID, ProducerPrice> prices,
                                           AID topic) {
         super(WHEN_ANY);
-
         addSubBehaviour(new WakerBehaviour(getAgent(), tradingDuration) {
             @Override
             protected void onWake() {

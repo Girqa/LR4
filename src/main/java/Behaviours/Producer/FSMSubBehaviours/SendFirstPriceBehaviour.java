@@ -1,7 +1,7 @@
 package Behaviours.Producer.FSMSubBehaviours;
 
 import AdditionalClasses.ParsingProvider;
-import Models.MarketDealData;
+import Models.ProducerMarketData;
 import Models.ProducerPrice;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
@@ -10,8 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SendFirstPriceBehaviour extends OneShotBehaviour {
-    private MarketDealData marketData;
-    public SendFirstPriceBehaviour(MarketDealData data) {
+    private ProducerMarketData marketData;
+    public SendFirstPriceBehaviour(ProducerMarketData data) {
         this.marketData = data;
     }
 

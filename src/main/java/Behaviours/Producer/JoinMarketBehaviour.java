@@ -12,11 +12,11 @@ import jade.lang.acl.MessageTemplate;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class JoinMarket extends Behaviour {
+public class JoinMarketBehaviour extends Behaviour {
     private MessageTemplate mt;
     private ProducerData producerData;
 
-    public JoinMarket(ProducerData producerData) {
+    public JoinMarketBehaviour(ProducerData producerData) {
         this.producerData = producerData;
     }
 
@@ -43,11 +43,9 @@ public class JoinMarket extends Behaviour {
                 );
                 // Кароче, топик передавать JSON-ом нельзя...
                 AID topic = JadePatternProvider.connectToTopic(getAgent(), distributerRequest.getTopicName());
-                getAgent().addBehaviour(
-                        new TradeOnMarketFSMBehaviour(consumerRequest.getEnergy(), producerData, topic)
-                );
+                getAgent().addBehaviour(new TradeOnMarketFSMBehaviour(consumerRequest.getEnergy(), producerData, topic));
             } else {
-                log.debug("{} doesn't have enough power", getAgent().getLocalName());
+                log.debug("{} doesn't have enough power: {}", getAgent().getLocalName(), producerData.getCurrentPower());
             }
         } else {
             block();

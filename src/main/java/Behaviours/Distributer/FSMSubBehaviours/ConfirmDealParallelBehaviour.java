@@ -6,8 +6,6 @@ import jade.core.behaviours.ParallelBehaviour;
 import jade.core.behaviours.WakerBehaviour;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Optional;
-
 @Slf4j
 public class ConfirmDealParallelBehaviour extends ParallelBehaviour {
     private BestPriceContainer bestPriceContainer;
@@ -18,7 +16,9 @@ public class ConfirmDealParallelBehaviour extends ParallelBehaviour {
         addSubBehaviour(new WakerBehaviour(a, confirmingDuration) {
             @Override
             protected void onWake() {
-                log.debug("Confirming time gone {}", getAgent().getLocalName());
+                if (!bestPriceContainer.isConfirmed()) {
+                    log.debug("Confirming time gone {}", getAgent().getLocalName());
+                }
             }
         });
     }

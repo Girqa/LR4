@@ -1,16 +1,22 @@
 package Models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 
 @Data
+@NoArgsConstructor
 public class ProducerData implements Consumer<Integer> {
-    private volatile double currentPower;
+    private double currentPower;
+    @JsonIgnore
     private Function<Integer, Double> generationExpression;
+    @JsonIgnore
     private int lastHour;
-    private volatile double relativeEnergyCost;
+    private double relativeEnergyCost;
+    @JsonIgnore
     private double balance;
 
     public ProducerData(Function<Integer, Double> generationExpression) {
