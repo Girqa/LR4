@@ -11,14 +11,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.function.Function;
 
 @Slf4j
-public class BuyEnergyRequest extends Behaviour {
+public class SendOfferBehaviour extends Behaviour {
     private int curHour;
     private Function<Integer, Double> energyConsumption;
     private AID distributer;
     private Timer timer;
 
-    public BuyEnergyRequest(Function<Integer, Double> energyConsumption,
-                            AID distributer) {
+    public SendOfferBehaviour(Function<Integer, Double> energyConsumption,
+                              AID distributer) {
         this.timer = Timer.getInstance();
         this.curHour = timer.getCurHour() - 1;
         this.energyConsumption = energyConsumption;

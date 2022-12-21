@@ -2,6 +2,7 @@ package Behaviours.Distributer.FSMSubBehaviours;
 
 import AdditionalClasses.ParsingProvider;
 import Models.BestPriceContainer;
+import jade.Boot;
 import jade.core.Agent;
 import jade.lang.acl.ACLMessage;
 import jade.proto.AchieveREInitiator;
@@ -12,7 +13,6 @@ import java.util.Vector;
 @Slf4j
 public class ConfirmDealWithProducerBehaviour extends AchieveREInitiator {
     private BestPriceContainer bestPriceContainer;
-    private boolean confirmed;
     public ConfirmDealWithProducerBehaviour(Agent a, BestPriceContainer bestPriceContainer) {
         super(a, new ACLMessage(ACLMessage.REQUEST));
         this.bestPriceContainer = bestPriceContainer;
@@ -31,21 +31,13 @@ public class ConfirmDealWithProducerBehaviour extends AchieveREInitiator {
     protected void handleAgree(ACLMessage agree) {
         if (bestPriceContainer.getProducer().equals(agree.getSender())) {
             log.debug("{} got agree from {}", getAgent().getLocalName(), agree.getSender().getLocalName());
-            confirmed = true;
+            bestPriceContainer.setConfirmed(true);
         }
-        super.handleAgree(agree);
     }
 
     @Override
     protected void handleRefuse(ACLMessage refuse) {
         log.debug("{} got refuse from {}", getAgent().getLocalName(), refuse.getSender().getLocalName());
-        confirmed = false;
-        super.handleRefuse(refuse);
-    }
-
-    @Override
-    public int onEnd() {
-        if (confirmed) return 1;
-        return 0;
+        bestPriceContainer.setConfirmed(false);
     }
 }

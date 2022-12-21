@@ -21,10 +21,12 @@ public class MarketFMSBehaviour extends FSMBehaviour {
     private final String RESPOND_TO_CONSUMER = "RESPOND_TO_CONSUMER";
     private final String CONFIRM_DEAL = "CONFIRM_DEAL";
     public MarketFMSBehaviour(Agent a, DistributerMarketData marketData) {
+        Timer timer = Timer.getInstance();
         AID topic = JadePatternProvider.connectToTopic(
                 a, marketData.getMarketName()
         );
-        long tradingDuration = Timer.getInstance().getMillisToNextHour() / 10;
+        long tradingDuration = timer.getMillisToNextHour() / 10;
+        long confirmingDuration = tradingDuration / 10;
         ConsumerRequest requestMsg = marketData.getConsumerRequest();
         Map<AID, ProducerPrice> prices = new HashMap<>();
         BestPriceContainer bestPriceContainer = new BestPriceContainer();
@@ -33,9 +35,9 @@ public class MarketFMSBehaviour extends FSMBehaviour {
         registerState(new InitiateMarketBehaviour(requestMsg, topic), INIT);
         registerState(new CollectPricesParallelBehaviour(tradingDuration, prices, topic), COLLECT_PRICES);
         registerState(new GetBestPriceBehaviour(prices, bestPriceContainer, topic), GET_THE_BEST);
-        registerState(new ConfirmDealWithProducerBehaviour(getAgent(), bestPriceContainer), CONFIRM_DEAL);
+        registerState(new ConfirmDealParallelBehaviour(getAgent(), bestPriceContainer, confirmingDuration), CONFIRM_DEAL);
         registerState(new DivideEnergyBehaviour(), DIVIDE_ENERGY);
-        registerLastState(new RespondToConsumerBehaviour(bestPriceContainer), RESPOND_TO_CONSUMER);
+        registerLastState(new RespondToConsumerBehaviour(bestPriceContainer, marketData.getConsumer()), RESPOND_TO_CONSUMER);
 
         registerDefaultTransition(NOTIFY_PRODUCERS, INIT);
         registerDefaultTransition(INIT, COLLECT_PRICES);

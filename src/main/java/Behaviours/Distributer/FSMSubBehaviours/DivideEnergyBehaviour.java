@@ -5,7 +5,6 @@ import jade.core.behaviours.Behaviour;
 public class DivideEnergyBehaviour extends Behaviour {
     @Override
     public void action() {
-
     }
 
     @Override
