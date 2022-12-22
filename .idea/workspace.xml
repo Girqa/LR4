@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="First Test Works Successfully">
+    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="Finished second test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/JadeTestingKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/JadeTestingKit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesBehaviour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesParallelBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesParallelBehaviour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/DivideEnergyBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/DivideEnergyBehaviour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +63,7 @@
       <recent name="B:\Java\MAS\Labs\LR4\src\main\java\AdditionalClasses" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestSystem">
+  <component name="RunManager" selected="JUnit.TestSystem.OneConsumerDistributerDividesRequest">
     <configuration name="Jade" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="LR4" />
@@ -105,15 +107,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestSystem.OneConsumerDistributerDividesRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LR4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSystem" />
+      <option name="METHOD_NAME" value="OneConsumerDistributerDividesRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Jade" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TestSystem" />
+      <item itemvalue="JUnit.TestSystem.OneConsumerDistributerDividesRequest" />
       <item itemvalue="JUnit.TestPlants" />
       <item itemvalue="JUnit.TestPlants.TestWindPowerPlant" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestSystem.OneConsumerDistributerDividesRequest" />
         <item itemvalue="JUnit.TestSystem" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestPlants" />
@@ -134,7 +148,8 @@
       <workItem from="1671572494010" duration="30978000" />
       <workItem from="1671643995875" duration="6466000" />
       <workItem from="1671652873124" duration="13331000" />
-      <workItem from="1671691739992" duration="5288000" />
+      <workItem from="1671691739992" duration="9675000" />
+      <workItem from="1671702226091" duration="286000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1671392435684</created>
@@ -185,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671695818448</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finished second test">
+      <created>1671697113037</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671697113037</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +233,8 @@
     <MESSAGE value="Added configuration classes and files.&#10;Need to be done: Tests" />
     <MESSAGE value="Added First Test" />
     <MESSAGE value="First Test Works Successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Test Works Successfully" />
+    <MESSAGE value="Finished second test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished second test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -220,11 +243,17 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="13" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/StartMarketAgainBehaviour.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/GetBestPriceBehaviour.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
-      <default-breakpoints>
-        <breakpoint enabled="true" type="java-exception" />
-        <breakpoint enabled="true" type="javascript-exception" />
-      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">

@@ -40,6 +40,7 @@ public class CollectPricesBehaviour extends Behaviour {
             ProducerPrice price = ParsingProvider.fromJson(
                     priceMsg.getContent(), ProducerPrice.class
             );
+            log.debug("{} got: {}", getAgent().getLocalName(), price);
             prices.put(priceMsg.getSender(), price);
         } else {
             block();

@@ -12,7 +12,7 @@ public class DivideEnergyBehaviour extends FSMBehaviour {
     private final String UNBALANCED_MODE = "UNBALANCED_MODE";
     public DivideEnergyBehaviour(Agent a, DistributerMarketData marketData, long marketDuration) {
         NetworkData networkData = new NetworkData();
-        long waitingTime = marketDuration / 10;
+        long waitingTime = marketDuration / 100;
 
         registerFirstState(new GetProducersPowerParallelBehaviour(a, waitingTime, networkData), GET_PRODUCERS_POWER);
         registerState(new CheckBalanceBehaviour(marketData, networkData), CHECK_BALANCE);

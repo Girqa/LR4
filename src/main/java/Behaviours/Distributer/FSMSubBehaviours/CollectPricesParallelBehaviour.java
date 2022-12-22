@@ -18,6 +18,7 @@ public class CollectPricesParallelBehaviour extends ParallelBehaviour {
         addSubBehaviour(new WakerBehaviour(getAgent(), tradingDuration) {
             @Override
             protected void onWake() {
+                log.info("{} collected {}", getAgent().getLocalName(), prices.values());
                 log.debug("{} checks agents", getAgent().getLocalName());
             }
         });
