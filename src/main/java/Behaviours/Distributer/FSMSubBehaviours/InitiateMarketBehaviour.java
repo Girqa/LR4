@@ -1,7 +1,7 @@
 package Behaviours.Distributer.FSMSubBehaviours;
 
 import AdditionalClasses.ParsingProvider;
-import Models.ConsumerRequest;
+import Models.Consumer.ConsumerRequest;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;

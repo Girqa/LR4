@@ -1,5 +1,6 @@
-package Models;
+package Models.Distributer;
 
+import Models.Consumer.ConsumerRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

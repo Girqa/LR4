@@ -1,4 +1,4 @@
-package Models;
+package Models.Producer;
 
 import Interfaces.Valuable;
 import lombok.AllArgsConstructor;

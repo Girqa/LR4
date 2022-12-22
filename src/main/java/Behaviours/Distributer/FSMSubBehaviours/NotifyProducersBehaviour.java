@@ -2,8 +2,8 @@ package Behaviours.Distributer.FSMSubBehaviours;
 
 import AdditionalClasses.JadePatternProvider;
 import AdditionalClasses.ParsingProvider;
-import Models.DistributerMarketData;
-import Models.DistributerRequest;
+import Models.Distributer.DistributerMarketData;
+import Models.Distributer.DistributerRequest;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;

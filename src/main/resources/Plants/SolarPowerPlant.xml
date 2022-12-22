@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SolarPowerPlant>
+    <solarCoefficients>
+        <coef>-81.355</coef>
+        <coef>20.922</coef>
+        <coef>-1.358</coef>
+        <coef>0.025</coef>
+    </solarCoefficients>
+</SolarPowerPlant>

@@ -2,8 +2,8 @@ package Behaviours.Producer.FSMSubBehaviours;
 
 import AdditionalClasses.JadePatternProvider;
 import AdditionalClasses.ParsingProvider;
-import Models.ProducerMarketData;
-import Models.ProducerPrice;
+import Models.Producer.ProducerMarketData;
+import Models.Producer.ProducerPrice;
 import jade.core.AID;
 import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;

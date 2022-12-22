@@ -2,8 +2,8 @@ package Behaviours.Distributer.FSMSubBehaviours;
 
 import AdditionalClasses.JadePatternProvider;
 import AdditionalClasses.PriceEntryComparator;
-import Models.BestPriceContainer;
-import Models.ProducerPrice;
+import Models.Distributer.BestPriceContainer;
+import Models.Producer.ProducerPrice;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import lombok.extern.slf4j.Slf4j;

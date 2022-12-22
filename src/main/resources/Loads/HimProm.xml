@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<loadData loadType="HimProm">
+    <loadFactor>3.1</loadFactor>
+    <loads>
+        <load hour="0">0.95</load>
+        <load hour="1">0.9</load>
+        <load hour="2">0.9</load>
+        <load hour="3">0.9</load>
+        <load hour="4">0.95</load>
+        <load hour="5">0.95</load>
+        <load hour="6">0.95</load>
+        <load hour="7">0.95</load>
+        <load hour="8">1</load>
+        <load hour="9">1</load>
+        <load hour="10">0.85</load>
+        <load hour="11">0.85</load>
+        <load hour="12">0.85</load>
+        <load hour="13">0.9</load>
+        <load hour="14">0.9</load>
+        <load hour="15">1</load>
+        <load hour="16">1</load>
+        <load hour="17">0.8</load>
+        <load hour="18">0.8</load>
+        <load hour="19">0.8</load>
+        <load hour="20">0.9</load>
+        <load hour="21">0.9</load>
+        <load hour="22">0.9</load>
+        <load hour="23">0.9</load>
+    </loads>
+</loadData>

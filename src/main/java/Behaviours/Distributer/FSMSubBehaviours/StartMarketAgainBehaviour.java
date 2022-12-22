@@ -1,7 +1,7 @@
 package Behaviours.Distributer.FSMSubBehaviours;
 
 import Behaviours.Distributer.DurationLimitedMarkedBehaviour;
-import Models.DistributerMarketData;
+import Models.Distributer.DistributerMarketData;
 import jade.core.behaviours.OneShotBehaviour;
 
 public class StartMarketAgainBehaviour extends OneShotBehaviour {

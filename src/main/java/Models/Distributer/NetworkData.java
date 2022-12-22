@@ -1,5 +1,6 @@
-package Models;
+package Models.Distributer;
 
+import Models.Producer.ProducerData;
 import lombok.Data;
 
 import java.util.ArrayList;

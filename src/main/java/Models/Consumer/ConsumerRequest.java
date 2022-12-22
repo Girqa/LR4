@@ -1,4 +1,4 @@
-package Models;
+package Models.Consumer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

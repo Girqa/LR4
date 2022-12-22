@@ -1,4 +1,4 @@
-package Models;
+package Models.Distributer;
 
 import jade.core.AID;
 import lombok.AllArgsConstructor;

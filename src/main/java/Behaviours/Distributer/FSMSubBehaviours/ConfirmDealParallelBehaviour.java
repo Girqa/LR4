@@ -1,6 +1,6 @@
 package Behaviours.Distributer.FSMSubBehaviours;
 
-import Models.BestPriceContainer;
+import Models.Distributer.BestPriceContainer;
 import jade.core.Agent;
 import jade.core.behaviours.ParallelBehaviour;
 import jade.core.behaviours.WakerBehaviour;

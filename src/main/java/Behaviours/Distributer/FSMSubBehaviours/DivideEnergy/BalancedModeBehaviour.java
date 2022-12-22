@@ -1,10 +1,10 @@
 package Behaviours.Distributer.FSMSubBehaviours.DivideEnergy;
 
 import Behaviours.Distributer.DurationLimitedMarkedBehaviour;
-import Models.ConsumerRequest;
-import Models.DistributerMarketData;
-import Models.NetworkData;
-import Models.ProducerData;
+import Models.Consumer.ConsumerRequest;
+import Models.Distributer.DistributerMarketData;
+import Models.Distributer.NetworkData;
+import Models.Producer.ProducerData;
 import jade.core.behaviours.OneShotBehaviour;
 
 public class BalancedModeBehaviour extends OneShotBehaviour {

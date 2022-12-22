@@ -1,6 +1,6 @@
 package Behaviours.Distributer;
 
-import Models.DistributerMarketData;
+import Models.Distributer.DistributerMarketData;
 import jade.core.Agent;
 import jade.core.behaviours.ParallelBehaviour;
 

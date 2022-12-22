@@ -1,5 +1,6 @@
-package Models;
+package Models.Distributer;
 
+import Models.Producer.ProducerPrice;
 import jade.core.AID;
 import lombok.Data;
 

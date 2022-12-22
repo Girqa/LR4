@@ -1,8 +1,8 @@
 package Behaviours.Producer;
 
 import AdditionalClasses.ParsingProvider;
-import Models.ProducerData;
-import Models.ProducerPrice;
+import Models.Producer.ProducerData;
+import Models.Producer.ProducerPrice;
 import jade.core.Agent;
 import jade.lang.acl.ACLMessage;
 import jade.proto.AchieveREResponder;
@@ -37,7 +37,7 @@ public class ConfirmDealWithDistributorBehaviour extends AchieveREResponder {
             producerData.decreasePower(price.getVolume());
             reply.setContent(ParsingProvider.toJson(price));
             log.info("{} confirms deal", getAgent().getLocalName());
-            log.debug("{} current balance: {}, current power: {}", getAgent().getLocalName(),
+            log.warn("{} current balance: {}, current power: {}", getAgent().getLocalName(),
                     producerData.getBalance(), producerData.getCurrentPower());
         }
         return reply;

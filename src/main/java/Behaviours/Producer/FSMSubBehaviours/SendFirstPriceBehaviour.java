@@ -1,8 +1,8 @@
 package Behaviours.Producer.FSMSubBehaviours;
 
 import AdditionalClasses.ParsingProvider;
-import Models.ProducerMarketData;
-import Models.ProducerPrice;
+import Models.Producer.ProducerMarketData;
+import Models.Producer.ProducerPrice;
 import jade.core.AID;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;

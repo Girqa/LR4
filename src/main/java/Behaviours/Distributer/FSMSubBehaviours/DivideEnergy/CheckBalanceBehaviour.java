@@ -1,7 +1,7 @@
 package Behaviours.Distributer.FSMSubBehaviours.DivideEnergy;
 
-import Models.DistributerMarketData;
-import Models.NetworkData;
+import Models.Distributer.DistributerMarketData;
+import Models.Distributer.NetworkData;
 import jade.core.behaviours.OneShotBehaviour;
 
 public class CheckBalanceBehaviour extends OneShotBehaviour {

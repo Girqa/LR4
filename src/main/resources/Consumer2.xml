@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<consumer>
+    <name>Consumer2</name>
+    <distributor>Distributer2</distributor>
+    <loadType>PishProm</loadType>
+</consumer>

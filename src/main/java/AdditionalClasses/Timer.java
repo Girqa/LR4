@@ -18,7 +18,7 @@ public class Timer {
 
     private Timer() {
         startTime = System.currentTimeMillis();
-        speed = 450;
+        speed = 3600;
         listeners = new CopyOnWriteArrayList<>();
         ses = Executors.newSingleThreadScheduledExecutor();
         ses.scheduleAtFixedRate(

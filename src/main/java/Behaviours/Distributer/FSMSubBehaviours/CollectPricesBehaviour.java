@@ -1,7 +1,7 @@
 package Behaviours.Distributer.FSMSubBehaviours;
 
 import AdditionalClasses.ParsingProvider;
-import Models.ProducerPrice;
+import Models.Producer.ProducerPrice;
 import jade.core.AID;
 import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;

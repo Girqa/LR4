@@ -1,8 +1,7 @@
 package Behaviours.Distributer.FSMSubBehaviours;
 
 import AdditionalClasses.ParsingProvider;
-import Models.BestPriceContainer;
-import jade.Boot;
+import Models.Distributer.BestPriceContainer;
 import jade.core.Agent;
 import jade.lang.acl.ACLMessage;
 import jade.proto.AchieveREInitiator;

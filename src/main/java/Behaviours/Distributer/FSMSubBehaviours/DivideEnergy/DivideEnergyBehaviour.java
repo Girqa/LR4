@@ -1,7 +1,7 @@
 package Behaviours.Distributer.FSMSubBehaviours.DivideEnergy;
 
-import Models.DistributerMarketData;
-import Models.NetworkData;
+import Models.Distributer.DistributerMarketData;
+import Models.Distributer.NetworkData;
 import jade.core.Agent;
 import jade.core.behaviours.FSMBehaviour;
 

@@ -2,8 +2,8 @@ package Behaviours.Distributer;
 
 import AdditionalClasses.ParsingProvider;
 import AdditionalClasses.Timer;
-import Models.ConsumerRequest;
-import Models.DistributerMarketData;
+import Models.Consumer.ConsumerRequest;
+import Models.Distributer.DistributerMarketData;
 import jade.core.behaviours.Behaviour;
 import jade.core.behaviours.WakerBehaviour;
 import jade.lang.acl.ACLMessage;
@@ -13,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class GetConsumerRequestBehaviour extends Behaviour {
     private MessageTemplate mt;
-    private int marketsCounter = 0;
     private final Timer timer = Timer.getInstance();
 
     @Override
@@ -31,9 +30,10 @@ public class GetConsumerRequestBehaviour extends Behaviour {
             ConsumerRequest consumerRequest = ParsingProvider.fromJson(
                     request.getContent(), ConsumerRequest.class
                     );
-            log.debug("Got {} from Consumer", consumerRequest);
+            log.warn("Got {} from Consumer", consumerRequest);
             DistributerMarketData data = new DistributerMarketData(
-                    "Market" + marketsCounter++ + timer.getMillisToNextHour(),
+                    "Market: " + getAgent().getLocalName() + " at time: " +
+                            timer.getCurHour() + "h " + timer.getMillisToNextHour() + "m",
                     request.getSender(),
                     consumerRequest,
                     0

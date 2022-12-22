@@ -2,7 +2,7 @@ package Behaviours.Consumer;
 
 import AdditionalClasses.ParsingProvider;
 import AdditionalClasses.Timer;
-import Models.ConsumerRequest;
+import Models.Consumer.ConsumerRequest;
 import jade.core.AID;
 import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
@@ -31,6 +31,7 @@ public class SendOfferBehaviour extends Behaviour {
     @Override
     public void action() {
         int timerTime = timer.getCurHour();
+        if (timerTime == 0 && curHour == 23) curHour = -1;
         if (timerTime - curHour > 0) {
             curHour = timerTime;
             // логика отправки запроса
@@ -41,7 +42,7 @@ public class SendOfferBehaviour extends Behaviour {
             );
             request.setContent(content);
             System.out.println();
-            log.debug("{} sends {} to {}", getAgent().getLocalName(), content, distributer.getLocalName());
+            log.warn("{} sends {} to {}", getAgent().getLocalName(), content, distributer.getLocalName());
             request.addReceiver(distributer);
 
             getAgent().send(request);

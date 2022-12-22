@@ -2,8 +2,8 @@ package Behaviours.Distributer.FSMSubBehaviours.DivideEnergy;
 
 import AdditionalClasses.JadePatternProvider;
 import AdditionalClasses.ParsingProvider;
-import Models.NetworkData;
-import Models.ProducerData;
+import Models.Distributer.NetworkData;
+import Models.Producer.ProducerData;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.lang.acl.ACLMessage;

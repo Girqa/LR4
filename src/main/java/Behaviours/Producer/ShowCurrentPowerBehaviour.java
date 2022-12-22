@@ -1,7 +1,7 @@
 package Behaviours.Producer;
 
 import AdditionalClasses.ParsingProvider;
-import Models.ProducerData;
+import Models.Producer.ProducerData;
 import jade.core.Agent;
 import jade.lang.acl.ACLMessage;
 import jade.proto.AchieveREResponder;

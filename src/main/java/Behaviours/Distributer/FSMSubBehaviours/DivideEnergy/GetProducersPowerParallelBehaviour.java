@@ -1,6 +1,6 @@
 package Behaviours.Distributer.FSMSubBehaviours.DivideEnergy;
 
-import Models.NetworkData;
+import Models.Distributer.NetworkData;
 import jade.core.Agent;
 import jade.core.behaviours.ParallelBehaviour;
 import jade.core.behaviours.WakerBehaviour;

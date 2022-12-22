@@ -2,9 +2,9 @@ package Behaviours.Producer;
 
 import AdditionalClasses.JadePatternProvider;
 import AdditionalClasses.ParsingProvider;
-import Models.DistributerRequest;
-import Models.ProducerData;
-import Models.ConsumerRequest;
+import Models.Distributer.DistributerRequest;
+import Models.Producer.ProducerData;
+import Models.Consumer.ConsumerRequest;
 import jade.core.AID;
 import jade.core.behaviours.Behaviour;
 import jade.lang.acl.ACLMessage;
@@ -38,7 +38,7 @@ public class JoinMarketBehaviour extends Behaviour {
             );
             ConsumerRequest consumerRequest = distributerRequest.getConsumerRequest();
             if (consumerRequest.getEnergy() <= producerData.getCurrentPower()) {
-                log.debug("{} joined to market {}",
+                log.warn("{} joined to market {}",
                         getAgent().getLocalName(), distributerRequest.getTopicName()
                 );
                 // Кароче, топик передавать JSON-ом нельзя...

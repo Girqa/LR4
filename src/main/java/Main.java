@@ -1,4 +1,4 @@
-import Models.ProducerData;
+import Models.Producer.ProducerData;
 import AdditionalClasses.Timer;
 import lombok.SneakyThrows;
 

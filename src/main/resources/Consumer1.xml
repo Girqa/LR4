@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<consumer>
+    <name>Consumer1</name>
+    <distributor>Distributer1</distributor>
+    <loadType>HimProm</loadType>
+</consumer>
