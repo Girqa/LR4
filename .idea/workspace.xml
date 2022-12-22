@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="Added configuration classes and files.&#10;Need to be done: Tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/JadeTestingKit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/MockAgent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestSystem.java" afterDir="false" />
+    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="Added First Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Agents/DistributerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Agents/DistributerAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Consumer/GetOrderResultBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Consumer/GetOrderResultBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/GetConsumerRequestBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/GetConsumerRequestBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +133,7 @@
       <workItem from="1671572494010" duration="30978000" />
       <workItem from="1671643995875" duration="6466000" />
       <workItem from="1671652873124" duration="13331000" />
-      <workItem from="1671691739992" duration="3008000" />
+      <workItem from="1671691739992" duration="4050000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1671392435684</created>
@@ -176,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671670582245</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added First Test">
+      <created>1671694932277</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671694932277</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +201,8 @@
     <MESSAGE value="Fully works.&#10;Need to be added:&#10;- Configs&#10;- MaxPrice&#10;- Tests" />
     <MESSAGE value="Added max price parameter and configured network" />
     <MESSAGE value="Added configuration classes and files.&#10;Need to be done: Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added configuration classes and files.&#10;Need to be done: Tests" />
+    <MESSAGE value="Added First Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added First Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,3 +1,4 @@
+import AdditionalClasses.JadePatternProvider;
 import AdditionalClasses.Timer;
 import Behaviours.Consumer.GetOrderResultBehaviour;
 import Behaviours.Consumer.SendOfferBehaviour;
@@ -35,41 +36,63 @@ public class TestSystem {
     @Test
     @SneakyThrows
     public void OneConsumerOneProducerCanSellButTooExpensive() {
-
         // Consumer behaviours
         List<BestPriceContainer> results = new ArrayList<>();
-        Behaviour sendOffer = new SendOfferBehaviour(
-                t -> 10.0, 0.5, new AID("Distributer", false)
-        );
-        Behaviour getOrderResult = new GetOrderResultBehaviour(results);
+        Behaviour[] consumer = createConsumerBehaviours(t->10.0, 0.5, "Distributer", results);
+
         // Distributer behaviours
         List<ConsumerRequest> requests = new ArrayList<>();
-        MockAgent distributer = new MockAgent();
         Behaviour getConsumerRequest = new GetConsumerRequestBehaviour(requests);
         // Producer behaviours
-        ProducerData data1 = new ProducerData(t ->5.0);
-        timer.addListener(data1);
-        Behaviour joinMarket = new JoinMarketBehaviour(data1);
-        Behaviour confirmDeal = new OneShotBehaviour() {
-            @Override
-            public void action() {
-                getAgent().addBehaviour(new ConfirmDealWithDistributorBehaviour(getAgent(), data1));
-            }
-        };
-        Behaviour showCurrentPower = new OneShotBehaviour() {
-            @Override
-            public void action() {
-                getAgent().addBehaviour(new ShowCurrentPowerBehaviour(getAgent(), data1));
-            }
-        };
+        Behaviour[] producer1 = createProducerBehaviours(t -> 10.0);
+        Behaviour[] producer2 = createProducerBehaviours(t -> 5.0);
+        Behaviour[] producer3 = createProducerBehaviours(t -> 0.0);
 
-        kit.createAgent("Consumer", sendOffer, getOrderResult);
+        kit.createAgent("Consumer", consumer);
         kit.createAgent("Distributer", getConsumerRequest);
-        kit.createAgent("Producer", joinMarket, confirmDeal, showCurrentPower);
+        kit.createAgent("Producer1", producer1);
+        kit.createAgent("Producer2", producer2);
+        kit.createAgent("Producer3", producer3);
 
         while (timer.getMillisToNextHour() > timer.getMillisPerHour()/2){}
 
         assertEquals(0, results.size());
         assertEquals(1, requests.size());
+    }
+
+    private Behaviour[] createConsumerBehaviours(Function<Integer, Double> consumption,
+                                                 double maxPrice,
+                                                 String distributer,
+                                                 List<BestPriceContainer> results){
+        Behaviour sendOffer = new SendOfferBehaviour(
+                consumption, maxPrice, new AID(distributer, false)
+        );
+        Behaviour getOrderResult = new GetOrderResultBehaviour(results);
+        return new Behaviour[]{sendOffer, getOrderResult};
+    }
+
+    private Behaviour[] createProducerBehaviours(Function<Integer, Double> generation) {
+        ProducerData data = new ProducerData(generation);
+        timer.addListener(data);
+        Behaviour registerYellowPage = new OneShotBehaviour() {
+            @Override
+            public void action() {
+                JadePatternProvider.registerYellowPage(getAgent(), "Producer");
+            }
+        };
+        Behaviour joinMarket = new JoinMarketBehaviour(data);
+        Behaviour confirmDeal = new OneShotBehaviour() {
+            @Override
+            public void action() {
+                getAgent().addBehaviour(new ConfirmDealWithDistributorBehaviour(getAgent(), data));
+            }
+        };
+        Behaviour showCurrentPower = new OneShotBehaviour() {
+            @Override
+            public void action() {
+                getAgent().addBehaviour(new ShowCurrentPowerBehaviour(getAgent(), data));
+            }
+        };
+        return new Behaviour[]{registerYellowPage, joinMarket, confirmDeal, showCurrentPower};
     }
 }
