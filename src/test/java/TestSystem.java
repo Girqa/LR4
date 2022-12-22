@@ -16,6 +16,7 @@ import jade.core.AID;
 import jade.core.behaviours.Behaviour;
 import jade.core.behaviours.OneShotBehaviour;
 import lombok.SneakyThrows;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -33,9 +34,14 @@ public class TestSystem {
         kit.startJade();
     }
 
+    @AfterEach
+    public void kilAgents() {
+        kit.killAgents();
+    }
+
     @Test
-    @SneakyThrows
     public void OneConsumerOneProducerCanSellButTooExpensive() {
+        timer.reInitiate(1800);
         // Consumer behaviours
         List<BestPriceContainer> results = new ArrayList<>();
         Behaviour[] consumer = createConsumerBehaviours(t->10.0, 0.5, "Distributer", results);
@@ -54,9 +60,36 @@ public class TestSystem {
         kit.createAgent("Producer2", producer2);
         kit.createAgent("Producer3", producer3);
 
-        while (timer.getMillisToNextHour() > timer.getMillisPerHour()/2){}
+        while (timer.getMillisToNextHour() > timer.getMillisPerHour()/2 + 20L){}
 
         assertEquals(0, results.size());
+        assertEquals(1, requests.size());
+    }
+
+    @Test
+    public void OneConsumerTwoProducersCanSellOneWinner() {
+        timer.reInitiate(1800);
+        // Consumer behaviours
+        List<BestPriceContainer> results = new ArrayList<>();
+        Behaviour[] consumer = createConsumerBehaviours(t->10.0, 0.5, "Distributer", results);
+
+        // Distributer behaviours
+        List<ConsumerRequest> requests = new ArrayList<>();
+        Behaviour getConsumerRequest = new GetConsumerRequestBehaviour(requests);
+        // Producer behaviours
+        Behaviour[] producer1 = createProducerBehaviours(t -> 100.0);
+        Behaviour[] producer2 = createProducerBehaviours(t -> 50.0);
+        Behaviour[] producer3 = createProducerBehaviours(t -> 15.0);
+
+        kit.createAgent("Consumer", consumer);
+        kit.createAgent("Distributer", getConsumerRequest);
+        kit.createAgent("Producer1", producer1);
+        kit.createAgent("Producer2", producer2);
+        kit.createAgent("Producer3", producer3);
+
+        while (timer.getMillisToNextHour() > timer.getMillisPerHour()/2 + 20L){}
+
+        assertEquals(1, results.size());
         assertEquals(1, requests.size());
     }
 

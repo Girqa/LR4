@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 
 public class Timer {
     private static Timer instance = new Timer();
-    private final long startTime;
+    private long startTime;
     private final int secondPerHour = 3600;
     private final int millisPerSecond = 1000;
     private int speed;
@@ -26,6 +26,11 @@ public class Timer {
         0L, 5L, TimeUnit.MILLISECONDS);
     }
 
+    public void reInitiate(int speed) {
+        startTime = System.currentTimeMillis();
+        this.speed = speed;
+        listeners.clear();
+    }
     public static Timer getInstance() {
         Timer localInstance = instance;
         if (localInstance == null) {

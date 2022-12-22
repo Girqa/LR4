@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="Added First Test">
+    <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="First Test Works Successfully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/JadeTestingKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/JadeTestingKit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +134,7 @@
       <workItem from="1671572494010" duration="30978000" />
       <workItem from="1671643995875" duration="6466000" />
       <workItem from="1671652873124" duration="13331000" />
-      <workItem from="1671691739992" duration="4050000" />
+      <workItem from="1671691739992" duration="5288000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1671392435684</created>
@@ -177,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671694932277</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="First Test Works Successfully">
+      <created>1671695818448</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671695818448</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +210,8 @@
     <MESSAGE value="Added max price parameter and configured network" />
     <MESSAGE value="Added configuration classes and files.&#10;Need to be done: Tests" />
     <MESSAGE value="Added First Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added First Test" />
+    <MESSAGE value="First Test Works Successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Test Works Successfully" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
