@@ -5,62 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61744a34-7907-4bf1-9301-caac27048c1e" name="Changes" comment="Added configuration classes and files.&#10;Need to be done: Tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Interfaces/Generation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Configs/ConsumerCfg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Configs/LoadConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Configs/Plants/SolarPowerPlant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Configs/Plants/ThermalPowerPlant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Configs/Plants/WindPowerPlant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Consumer1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Consumer2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Consumer3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Loads/HimProm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Loads/Mpei.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Loads/PishProm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Plants/SolarPowerPlant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Plants/ThermalPowerPlant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Plants/WindPowerPlant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestPlants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/JadeTestingKit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/JadeTestingClasses/MockAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdditionalClasses/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Agents/ConsumerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Agents/ConsumerAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Agents/ProducerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Agents/ProducerAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Agents/DistributerAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Agents/DistributerAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Consumer/GetOrderResultBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Consumer/GetOrderResultBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Consumer/SendOfferBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Consumer/SendOfferBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/DurationLimitedMarkedBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/DurationLimitedMarkedBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CleanPricesBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CleanPricesBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesParallelBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/CollectPricesParallelBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/ConfirmDealParallelBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/ConfirmDealParallelBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/ConfirmDealWithProducerBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/ConfirmDealWithProducerBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/BalancedModeBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/BalancedModeBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/CheckBalanceBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/CheckBalanceBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/DivideEnergyBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/DivideEnergyBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/GetProducersPowerBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/GetProducersPowerBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/GetProducersPowerParallelBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/DivideEnergy/GetProducersPowerParallelBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/GetBestPriceBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/GetBestPriceBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/InitiateMarketBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/InitiateMarketBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/NotifyProducersBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/NotifyProducersBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/ResponseToConsumerBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/ResponseToConsumerBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/StartMarketAgainBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/FSMSubBehaviours/StartMarketAgainBehaviour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/GetConsumerRequestBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/GetConsumerRequestBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/MarketFSMBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Distributer/MarketFSMBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/ConfirmDealWithDistributorBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/ConfirmDealWithDistributorBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/DecriesPriceBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/DecriesPriceBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/SendFirstPriceBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/FSMSubBehaviours/SendFirstPriceBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/JoinMarketBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/JoinMarketBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/ShowCurrentPowerBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/ShowCurrentPowerBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/TradeOnMarketFSMBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Behaviours/Producer/TradeOnMarketFSMBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/BestPriceContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Distributer/BestPriceContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ConsumerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Consumer/ConsumerRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DistributerMarketData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Distributer/DistributerMarketData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/DistributerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Distributer/DistributerRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/NetworkData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Distributer/NetworkData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ProducerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Producer/ProducerData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ProducerMarketData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Producer/ProducerMarketData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ProducerPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Producer/ProducerPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TopicContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Distributer/TopicContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,15 +40,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "B:/Java/MAS/Labs/LR4/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;B:/Java/MAS/Labs/LR4/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Behaviours.Distributer" />
@@ -114,7 +66,7 @@
       <recent name="B:\Java\MAS\Labs\LR4\src\main\java\AdditionalClasses" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Jade">
+  <component name="RunManager" selected="JUnit.TestSystem">
     <configuration name="Jade" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="jade.Boot" />
       <module name="LR4" />
@@ -149,14 +101,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LR4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSystem" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Jade" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.TestSystem" />
       <item itemvalue="JUnit.TestPlants" />
       <item itemvalue="JUnit.TestPlants.TestWindPowerPlant" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestSystem" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestPlants" />
         <item itemvalue="JUnit.TestPlants.TestWindPowerPlant" />
@@ -175,7 +138,8 @@
       <workItem from="1671453762116" duration="30157000" />
       <workItem from="1671572494010" duration="30978000" />
       <workItem from="1671643995875" duration="6466000" />
-      <workItem from="1671652873124" duration="12519000" />
+      <workItem from="1671652873124" duration="13331000" />
+      <workItem from="1671691739992" duration="3008000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1671392435684</created>
@@ -205,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671653840320</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added configuration classes and files.&#10;Need to be done: Tests">
+      <created>1671670582245</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671670582245</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
